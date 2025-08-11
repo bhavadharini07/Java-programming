@@ -28,6 +28,9 @@ class Main {
 }
 }
 
+
+
+
 //matrix 3row 3 col
 class Main {
     public static void main(String[] args) {
@@ -212,5 +215,46 @@ System.out.println("matrix");
             System.out.println();
         }
 
+    }
+}
+
+
+//delect last column
+
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("no of rows: ");
+        int row = sc.nextInt();
+        System.out.print("no of col: ");
+        int col = sc.nextInt();
+
+        int[][] arr = new int[row][col];
+        System.out.println("enter num");
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                arr[i][j] = sc.nextInt();
+            }
+        }
+
+
+        int[][] newArr = new int[row][col - 1];
+
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col - 1; j++) {
+                newArr[i][j] = arr[i][j];
+            }
+        }
+
+        System.out.println("Matrix :");
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col - 1; j++) {
+                System.out.print(newArr[i][j] + " ");
+            }
+            System.out.println();
+        }
     }
 }
