@@ -1,0 +1,216 @@
+//2d array
+class Main {
+    public static void main(String[] args) {
+        int[][] arr;                
+        arr = new int[2][3];    
+
+        arr[0][0] = 2;
+        arr[0][1] = 4;
+        arr[1][1] = 6;
+
+        System.out.println(arr[0][0]);
+        System.out.println(arr[0][1]);
+        System.out.println(arr[1][1]);
+    }
+}
+
+//matrix 2row 2 col
+class Main {
+    public static void main(String[] args) {
+        int[][] arr={{1,2,3},{4,5,6}};            
+        
+        for (int i=0;i<2;i++)
+        { 
+            for(int j=0;j<2;j++){
+        System.out.print(arr[i][j]+"");  
+    }System.out.println();
+}
+}
+}
+
+//matrix 3row 3 col
+class Main {
+    public static void main(String[] args) {
+        int[][] arr = {
+           {1, 2, 3},{4, 5, 6},{7, 8, 9} };            
+        for (int i = 0; i < 3; i++) { 
+            for (int j = 0; j < 3; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+// assign 3col 3 row
+class Main {
+    public static void main(String[] args) {
+        int[][] arr;                
+        arr = new int[3][3];    
+
+        arr[0][0] = 1;
+        arr[0][1] = 2;
+        arr[0][2] = 3;
+        arr[1][1] = 4;
+        arr[2][2] = 5;
+        arr[1][2] = 6;
+        arr[2][2] = 7;
+        
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+//2x2
+class Main {
+    public static void main(String[] args) {
+        int x = 2;
+        int y = 2;
+        int[][] arr = new int[x][y];
+        int num = 1;
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < y; j++) {
+                arr[i][j] = num;
+                num++;
+            }
+        }
+
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < y; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+//3d
+class Main {
+    public static void main(String[] args) {
+        int x = 3;
+        int y = 3;
+        int[][] arr = new int[x][y];
+        int num = 1;
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < y; j++) {
+                arr[i][j] = num;
+                num++;
+            }
+        }
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < y; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+//reverse 2nd column
+class Main {
+    public static void main(String[] args) {
+        int x = 3;
+        int y = 3;
+        int[][] arr = new int[x][y];
+        int num = 1;
+                                                    
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < y; j++) {
+                arr[i][j] = num++;
+            }
+        }
+
+        for (int i = 0; i < x / 2; i++) {
+            int temp = arr[i][1];
+            arr[i][1] = arr[x - 1 - i][1];
+            arr[x - 1 - i][1] = temp;
+        }
+        
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < y; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+//push only even num in array
+class Main {
+    public static void main(String[] args) {
+        int x = 3;
+        int y = 3;
+        int[][] arr = new int[x][y];
+        int num = 2; 
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < y; j++) {
+                arr[i][j] = num;
+                num += 2; 
+            }
+        }
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < y; j++) {
+                System.out.print(arr[i][j] + "  ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+
+
+
+//push only odd num
+class Main {
+    public static void main(String[] args) {
+        int x = 3;
+        int y = 3;
+        int[][] arr = new int[x][y];
+        int num = 3;
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < y; j++) {
+                arr[i][j] = num;
+                num+=3;
+            }
+        }
+        for (int i = 0; i < x; i++) {
+            for (int j = 0; j < y; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}
+
+//user input matrix
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+
+        System.out.print("no of rows: ");
+        int row = sc.nextInt();
+        System.out.print("no of col: ");
+        int col = sc.nextInt();
+
+        int[][] arr = new int[row][col];
+System.out.println("enter num");
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                arr[i][j] = sc.nextInt();
+            }
+        }
+System.out.println("matrix");
+        for (int i = 0; i < row; i++) {
+            for (int j = 0; j < col; j++) {
+                System.out.print(arr[i][j] + " ");
+            }
+            System.out.println();
+        }
+
+    }
+}
