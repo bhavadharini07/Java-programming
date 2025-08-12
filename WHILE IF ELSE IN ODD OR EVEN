@@ -1,43 +1,53 @@
 PROGRAM:
 import java.util.Scanner;
 
-public class WeekDays {
+public class Main {
     public static void main(String[] args) {
-        Scanner input = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in);
 
-        System.out.print("Enter day number (1 to 7): ");
-        int day = input.nextInt();
+        System.out.print("Enter a number (0 to exit): ");
+        int num = scanner.nextInt();
 
-        switch (day) {
-            case 1:
-                System.out.println("Sunday");
-                break;
-            case 2:
-                System.out.println("Monday");
-                break;
-            case 3:
-                System.out.println("Tuesday");
-                break;
-            case 4:
-                System.out.println("Wednesday");
-                break;
-            case 5:
-                System.out.println("Thursday");
-                break;
-            case 6:
-                System.out.println("Friday");
-                break;
-            case 7:
-                System.out.println("Saturday");
-                break;
-            default:
-                System.out.println("Invalid day number! Please enter 1 to 7.");
+        while (num != 0) {
+            if (num % 2 == 0) {
+                System.out.println(num + " is even.");
+            } else {
+                System.out.println(num + " is odd.");
+            }
+
+            System.out.print("Enter a number (0 to exit): ");
+            num = scanner.nextInt();
         }
 
-        input.close(); 
+        System.out.println("Program exited.");
+        scanner.close();
     }
 }
 
 OUTPUT:
-Enter day number (1 to 7): 6
-Friday
+Enter a number (0 to exit): 7
+7 is odd.
+Enter a number (0 to exit): 9
+9 is odd.
+Enter a number (0 to exit): 4
+4 is even.
+Enter a number (0 to exit): 6
+6 is even.
+Enter a number (0 to exit): 3
+3 is odd.
+Enter a number (0 to exit): 8
+8 is even.
+Enter a number (0 to exit): 7
+7 is odd.
+Enter a number (0 to exit): 8
+8 is even.
+Enter a number (0 to exit): 10
+10 is even.
+Enter a number (0 to exit): 111
+111 is odd.
+Enter a number (0 to exit): 122
+122 is even.
+Enter a number (0 to exit): 188
+188 is even.
+Enter a number (0 to exit): 0
+Program exited.
