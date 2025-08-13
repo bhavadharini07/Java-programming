@@ -1,0 +1,12 @@
+class Main {
+    public static void main(String[] args) {
+        String x = "hello";
+        String y = "hello bhava hello";
+        System.out.println(x.replace('l', 'p')); // Output: heppo
+        String a = "(?i)hello"; 
+        System.out.println(y.replaceAll(a, "hi")); 
+        String b = "hello";
+        System.out.println(y.replaceFirst(b, "hi"));
+    }
+}
+
