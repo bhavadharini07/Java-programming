@@ -235,4 +235,37 @@ public class Main {
     }
 }
 
+//multilevel 
+
+
+// base interface
+interface Audi {
+    default void modelofAudi() {
+        System.out.println("This is a model of Audi");
+    }
+}
+
+// base interface
+interface BMW {
+    default void modelofBmw() {
+        System.out.println("This is a model of BMW");
+    }
+}
+
+// class implementing both interfaces
+class Car implements Audi, BMW {
+    Car() {
+        System.out.println("This is a Car");
+    }
+}
+
+// Main class 
+public class Main {
+    public static void main(String[] args) {
+        Car obj = new Car();
+        obj.modelofAudi();
+        obj.modelofBmw();
+    }
+}
+
 
