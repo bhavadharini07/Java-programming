@@ -109,3 +109,28 @@ public class Main {
     
     }
 }
+
+
+//super class sub class
+// Parent class
+class Cars {
+    void sound() {
+        System.out.println("Cars make a sound");
+    }
+}
+
+// Child class
+class BMW extends Cars {
+    void sound() {
+        System.out.println("BMW");
+    }
+}
+
+// Main class
+public class Main {
+    public static void main(String[] args) { 
+        Cars a; 
+        a = new BMW();
+        a.sound();
+    }
+}
