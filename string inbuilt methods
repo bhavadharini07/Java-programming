@@ -52,3 +52,367 @@ class Main {
                 
     }
 }
+
+//contains(),contentEquals()  2
+import java.util.Scanner;
+class Main {
+    public static void main(String[] args) {
+        Scanner data = new Scanner(System.in);   
+        System.out.print("enter name:");
+        String name = data.nextLine();           
+        
+        System.out.println(name.contains("h") );
+        System.out.println(name.contentEquals("hello"));
+    
+    }
+}
+
+//copyValueOf(),endsWith()  2
+
+class Main {
+    public static void main(String[] args) {
+      
+        char[] a = {'S','W','A','T','H','I'};
+        String str = String.copyValueOf(a, 0, 6); 
+        System.out.println(str);
+        System.out.println(str.endsWith("I")); 
+    }
+}
+
+//user input get char and convert string   2
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner data = new Scanner(System.in);   
+        System.out.print("enter no of num ");
+        int n = data.nextInt();
+
+        char[] a = new char[n];
+        for (int i = 0; i < n; i++) {
+            System.out.print("enter char " +  ": ");
+            a[i] = data.next().charAt(0);
+        }
+
+        String str = String.copyValueOf(a); 
+        System.out.println(str);
+        System.out.println(str.endsWith("i")); 
+    }
+}
+//format  1
+class Main {
+    public static void main(String[] args) {
+        String data = "swathi";
+        String Hi = "Hi %s my age is %d";
+        System.out.println(data.equalsIgnoreCase("Hello")); 
+       
+         System.out.println(Hi.format(Hi,"swathi",20));
+    }
+}
+
+//user input format  1
+import java.util.Scanner;
+
+class Main {
+    public static void main(String[] args) {
+        Scanner n = new Scanner(System.in);
+        System.out.print("enter name: ");
+        String str = n.nextLine();
+        
+        System.out.print("enter age: ");
+        int age = n.nextInt();
+
+        String Hi = "Hi %s my age is %d";
+        System.out.println(str.equalsIgnoreCase("Hello"));
+        System.out.println(String.format(Hi, str, age));
+
+    }
+}
+
+//getChars()
+class Main {
+    public static void main(String[] args) {
+        char[] a={'1','2','3','4','5','6','7','8','9'};
+     System.out.println(a);
+     String str="hello world";
+     str.getChars(6,11,a,4);
+     System.out.println(a);
+     
+    }
+}
+
+//
+class Main {
+    public static void main(String[] args) {
+        char[] a={'9','0','9','8','1','2','3','4','5','6','7'};
+              
+     String str="swathi";
+     str.getChars(0,6,a,4);
+     System.out.println(a);
+        
+    }
+}
+
+//big name num accepts only single bit
+class Main {
+    public static void main(String[] args) {
+        char[] a={'9','0','9','8','1','2','3','4','5','6','7','8','9','1','2','3'};
+           
+     String str="bhavadharini";
+     str.getChars(0,12,a,4);
+     System.out.println(a);     
+    }
+}
+
+//getbytes()
+class Main {
+	public static void main(String[] args) {
+		
+		String name ="swathi";
+        byte[] array=name.getBytes();
+        System.out.println(array[0]);
+
+
+	}
+}
+
+//hashCode()
+      class Main {
+	public static void main(String[] args) {
+		
+		String name ="swathi";
+        System.out.println(name.hashCode());
+
+
+	}
+}
+
+//upper lower case  2
+class Main {
+	public static void main(String[] args) {
+		
+		String name ="swathi";
+		String myname ="SWATHI";
+              System.out.println(name.toUpperCase());
+              System.out.println(myname.toLowerCase());
+
+
+	}
+}
+
+//indexOf()
+class Main {
+	public static void main(String[] args) {
+		
+		String name ="have a nice day";
+	
+        System.out.println(name.indexOf("day"));
+
+
+	}
+}
+
+//is empty
+class Main {
+	public static void main(String[] args) {
+		
+		String name ="have a nice day";
+		String n ="";
+	
+        System.out.println(name.isEmpty());
+        System.out.println(n.isEmpty());
+
+	}
+}
+
+//join
+class Main {
+	public static void main(String[] args) {
+		
+		String name =String.join(" ","swathi","bhava","san");
+        System.out.println(name);
+  
+
+	}
+}
+//lastindexof,length
+class Main {
+	public static void main(String[] args) {
+		
+		String name ="swathi rajagopal";
+        System.out.println(name.lastIndexOf("rajagopal"));
+        System.out.println(name.length());
+  
+
+	}
+}
+
+//matches,regionMatches    2
+public class Main
+{
+	public static void main(String[] args) {
+	    String a="new world";
+	    String b="hello world";
+	    String c="hello|world|java";
+		System.out.println("hello".matches(b));
+		System.out.println("world".matches(c));
+		System.out.println("javascript".matches(c));
+		System.out.println(b.regionMatches(8,a,6,5));
+	}
+}
+
+//replace,replaceAll,replaceFirst    3
+public class Main
+{
+	public static void main(String[] args) {
+	    String x="new world";
+	    String y="hello swathi hello";
+		System.out.println(x.replace('l','p'));
+		String a="(?i)hello";
+		System.out.println(y.replaceAll(a,"hi"));
+		String b="hello";
+		System.out.println(y.replaceFirst(b,"hi"));
+		
+	}
+}
+
+//split
+public class Main
+{
+	public static void main(String[] args) {
+	    String x="hello world";
+	    String y="[,\\ .\\s]";
+	    String[]z=x.split(y);
+	    for(String s:z){
+	        		System.out.println(s);
+	    }
+		
+		
+	}
+}
+
+//user input split
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	       Scanner data= new Scanner(System.in);
+
+        System.out.print("enter a sentence: ");
+        String x = data.nextLine();
+	    String y="[,\\ .\\s]";
+	    String[]z=x.split(y);
+	    for(String s:z){
+	        		System.out.println(s);
+	    }
+		
+		
+	}
+}
+
+//concat,replace ,replaceAll,split userinput
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner data = new Scanner(System.in);
+        System.out.print("enter a sentence: ");
+        String x = data.nextLine();
+
+        System.out.println(x.concat("hello"));
+
+        System.out.println(x.replace('a', 'i'));
+
+        String a = "(?i)hello";
+        System.out.println(x.replaceAll(a, "hi"));
+
+        String y = "[,\\.\\s]";
+        String[] z = x.split(y);
+        for (String s : z) {
+            System.out.println(s);
+        }
+    }
+}
+
+//startsWith()
+public class Main
+
+{
+	public static void main(String[] args) {
+	 String x="Hello";
+	 System.out.println(x.startsWith("Hello"));
+	 System.out.println(x.startsWith("he"));
+		
+	}
+}
+
+//subString,sunSequence,concat
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        
+        Scanner data = new Scanner(System.in);
+        System.out.print("Enter name : ");
+        String x = data.nextLine(); 
+        
+        System.out.println(x);
+        
+        String a = x.substring(0, 6);
+        System.out.println(a);
+        
+        String b = x.substring(6, 15);
+        System.out.println(b);
+        
+        System.out.println(x.subSequence(6, 15));
+        
+        String n = a.concat(" " + b);
+        System.out.println(n);c
+        
+    }
+}
+
+//char array,lowercase,uppercase,trim,valueof
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    Scanner data=new Scanner(System.in);
+	    System.out.println("Enter:");
+	    String x=data.nextLine();
+	    System.out.println(x);
+	   
+	    //toCharArray()
+	    char[] y=x.toCharArray();
+	    for(char c:y){
+	        System.out.println(c);
+	    }
+	    
+	    //toUpperCase()
+	    System.out.println(x.toUpperCase());
+	    //toLowerCase()
+	    System.out.println(x.toLowerCase());
+	    //toString()
+	    String m=x.toString();
+	    System.out.println(m);
+	   
+	   
+
+	}
+}
+//trim,valueof
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        
+        Scanner data = new Scanner(System.in);
+        System.out.print("Enter name : ");
+        String x = data.nextLine(); 
+        
+        System.out.println(x);
+        System.out.println(x.trim());
+         System.out.println(String.valueOf(x));
+    }
+}
