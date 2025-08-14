@@ -72,7 +72,7 @@ class Main {
 class Main {
     public static void main(String[] args) {
       
-        char[] a = {'S','W','A','T','H','I'};
+        char[] a = {'B','H','A','V','A','I'};
         String str = String.copyValueOf(a, 0, 6); 
         System.out.println(str);
         System.out.println(str.endsWith("I")); 
@@ -106,7 +106,7 @@ class Main {
         String Hi = "Hi %s my age is %d";
         System.out.println(data.equalsIgnoreCase("Hello")); 
        
-         System.out.println(Hi.format(Hi,"swathi",20));
+         System.out.println(Hi.format(Hi,"bhava",20));
     }
 }
 
@@ -146,7 +146,7 @@ class Main {
     public static void main(String[] args) {
         char[] a={'9','0','9','8','1','2','3','4','5','6','7'};
               
-     String str="swathi";
+     String str="bhava";
      str.getChars(0,6,a,4);
      System.out.println(a);
         
@@ -158,7 +158,7 @@ class Main {
     public static void main(String[] args) {
         char[] a={'9','0','9','8','1','2','3','4','5','6','7','8','9','1','2','3'};
            
-     String str="bhavadharini";
+     String str="anu";
      str.getChars(0,12,a,4);
      System.out.println(a);     
     }
@@ -168,7 +168,7 @@ class Main {
 class Main {
 	public static void main(String[] args) {
 		
-		String name ="swathi";
+		String name ="bhava";
         byte[] array=name.getBytes();
         System.out.println(array[0]);
 
@@ -180,7 +180,7 @@ class Main {
       class Main {
 	public static void main(String[] args) {
 		
-		String name ="swathi";
+		String name ="bhava";
         System.out.println(name.hashCode());
 
 
@@ -191,8 +191,8 @@ class Main {
 class Main {
 	public static void main(String[] args) {
 		
-		String name ="swathi";
-		String myname ="SWATHI";
+		String name ="bhava";
+		String myname ="bhava";
               System.out.println(name.toUpperCase());
               System.out.println(myname.toLowerCase());
 
@@ -239,8 +239,8 @@ class Main {
 class Main {
 	public static void main(String[] args) {
 		
-		String name ="swathi rajagopal";
-        System.out.println(name.lastIndexOf("rajagopal"));
+		String name ="bhavadharini ravikumar";
+        System.out.println(name.lastIndexOf("ravikumar"));
         System.out.println(name.length());
   
 
