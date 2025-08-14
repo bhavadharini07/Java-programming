@@ -165,3 +165,43 @@ public class Main {
     }
 }
 
+//user input
+[11:46 am, 14/08/2025] Swathi 2: import java.util.Scanner;
+
+// Parent class
+class Parent {
+    String cousin1;
+
+    void cousinOne() {
+        System.out.println("Cousin: " + cousin1);
+    }
+}
+
+// Child class 
+class Child extends Parent {
+    String cousin2;
+
+    void cousinTwo() {
+        System.out.println("Cousin: " + cousin2);
+    }
+}
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner data = new Scanner(System.in);
+
+        Child obj = new Child();
+
+        System.out.print("enter first cousin name: ");
+        obj.cousin1 = data.nextLine();
+
+        System.out.print("enter second cousin name: ");
+        obj.cousin2 = data.nextLine();
+
+        obj.cousinOne();
+        obj.cousinTwo();
+
+    }
+}
+
+
