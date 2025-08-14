@@ -134,3 +134,34 @@ public class Main {
         a.sound();
     }
 }
+
+
+//mutlilevel inheritance
+// Base class 
+class Vehical {
+    void vehical() {
+        System.out.println("This is a Vehicel");
+    }
+}
+
+// Base class 2
+class FourWheeler extends Vehicel {
+    FourWheeler() {
+        System.out.println("This is a FourWheeler");
+    }
+}
+
+// Derived class
+class Car extends FourWheeler {
+    Car() {
+        System.out.println("This is a Car");
+    }
+}
+
+// Main class
+public class Main {
+    public static void main(String[] args) {
+        Car obj = new Car(); 
+    }
+}
+
