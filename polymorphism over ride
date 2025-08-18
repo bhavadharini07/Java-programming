@@ -1,0 +1,33 @@
+class Vehicle
+{
+    public static drive()
+    {
+system.out.println("drive");
+}
+class bike extends Vehicle
+{
+    @override
+    public static drive()
+    {
+        system.out.println("driving bike");
+    }
+    class car extends Vechile
+    {
+        @override
+        public static void drive()
+        {
+            system.out.println("driving car");
+        }
+    main(String[] args)
+    {
+        v = new Bike();
+        system.out.println(v.drive());
+        a = new car();
+        system.out.println(a.drive());
+        b = new Vehicle();
+        system.out.println(b.drive());
+    }
+
+    
+    
+    
