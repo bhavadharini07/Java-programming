@@ -1,0 +1,42 @@
+// over loading 
+class Payment{
+    public void mode(){
+        System.out.println("Payment");
+    }}
+    
+class UPI extends Payment{
+    @Override
+    public  void mode(){
+        System.out.println("UPI");
+    }}
+class credit extends Payment{
+    @Override
+    public void mode(){
+        System.out.println("credit");
+    }
+}
+class Bank_transfer extends Payment{
+    @Override
+    public void mode(){
+        System.out.println("Bank transfer");
+    }
+}
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Payment a;
+	    a=new UPI();
+	    a.mode();
+	    
+	    a=new credit();
+	    a.mode();
+	    
+	     a=new Bank_transfer();
+	    a.mode();
+	    
+	     a=new Payment();
+	    a.mode();
+	    
+	}
+}
